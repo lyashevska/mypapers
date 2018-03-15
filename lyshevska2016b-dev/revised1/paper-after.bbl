@@ -1,0 +1,370 @@
+\newcommand{\noop}[1]{}
+\begin{thebibliography}{34}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Agarwal et~al.(2002)Agarwal, Gelfand and Citron-Pousty}]{agarwal2002}
+\bibinfo{author}{Agarwal, D.}, \bibinfo{author}{Gelfand, A.},
+  \bibinfo{author}{Citron-Pousty, S.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Zero-inflated models with application to spatial
+  count data}.
+\newblock \bibinfo{journal}{Environmental and Ecological Statistics}
+  \bibinfo{volume}{9}, \bibinfo{pages}{341--355}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1023/A%3A1020910605990},
+  \DOIprefix\doi{10.1023/A:1020910605990}.
+%Type = Article
+\bibitem[{Bijleveld et~al.(2012)Bijleveld, van Gils, van~der Meer, Dekinga,
+  Kraan, van~der Veer and Piersma}]{bijleveld2012}
+\bibinfo{author}{Bijleveld, A.I.}, \bibinfo{author}{van Gils, J.A.},
+  \bibinfo{author}{van~der Meer, J.}, \bibinfo{author}{Dekinga, A.},
+  \bibinfo{author}{Kraan, C.}, \bibinfo{author}{van~der Veer, H.W.},
+  \bibinfo{author}{Piersma, T.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Designing a benthic monitoring programme with
+  multiple conflicting objectives}.
+\newblock \bibinfo{journal}{Methods in Ecology and Evolution}
+  \bibinfo{volume}{3}, \bibinfo{pages}{526--536}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.2041-210X.2012.00192.x},
+  \DOIprefix\doi{10.1111/j.2041-210X.2012.00192.x}.
+%Type = Article
+\bibitem[{Boyd et~al.(2015)Boyd, Woillez, Bertrand, Castillo, Bertrand and
+  Punt}]{boyd2015}
+\bibinfo{author}{Boyd, C.}, \bibinfo{author}{Woillez, M.},
+  \bibinfo{author}{Bertrand, S.}, \bibinfo{author}{Castillo, R.},
+  \bibinfo{author}{Bertrand, A.}, \bibinfo{author}{Punt, A.E.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Bayesian posterior prediction of the patchy spatial
+  distributions of small pelagic fish in regions of suitable habitat}.
+\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{72}, \bibinfo{pages}{290--303}.
+%Type = Article
+\bibitem[{Brus and Heuvelink(2007)}]{brus2007}
+\bibinfo{author}{Brus, D.J.}, \bibinfo{author}{Heuvelink, G.B.M.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Optimization of sample patterns for universal kriging
+  of environmental variables}.
+\newblock \bibinfo{journal}{Geoderma} \bibinfo{volume}{138},
+  \bibinfo{pages}{86--95}.
+%Type = Article
+\bibitem[{Caughlan and Oakley(2001)}]{caughlan2001}
+\bibinfo{author}{Caughlan, L.}, \bibinfo{author}{Oakley, K.L.},
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{Cost considerations for long-term ecological
+  monitoring}.
+\newblock \bibinfo{journal}{Ecological Indicators} \bibinfo{volume}{1},
+  \bibinfo{pages}{123 -- 134}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S1470160X01000152},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/S1470-160X(01)00015-2}.
+%Type = Article
+\bibitem[{Clarke and Green(1988)}]{clarke1988}
+\bibinfo{author}{Clarke, K.R.}, \bibinfo{author}{Green, R.H.},
+  \bibinfo{year}{1988}.
+\newblock \bibinfo{title}{Statistical design and analysis for a `biological
+  effects' study}.
+\newblock \bibinfo{journal}{Marine Ecology Progress Series}
+  \bibinfo{volume}{46}, \bibinfo{pages}{213--226}.
+%Type = Article
+\bibitem[{Compton et~al.(2013)Compton, Holthuijsen, Koolhaas, Dekinga, ten
+  Horn, Smith, Galama, Brugge, van~der Wal, van~der Meer, van~der Veer and
+  Piersma}]{compton2013}
+\bibinfo{author}{Compton, T.J.}, \bibinfo{author}{Holthuijsen, S.},
+  \bibinfo{author}{Koolhaas, A.}, \bibinfo{author}{Dekinga, A.},
+  \bibinfo{author}{ten Horn, J.}, \bibinfo{author}{Smith, J.},
+  \bibinfo{author}{Galama, Y.}, \bibinfo{author}{Brugge, M.},
+  \bibinfo{author}{van~der Wal, D.}, \bibinfo{author}{van~der Meer, J.},
+  \bibinfo{author}{van~der Veer, H.W.}, \bibinfo{author}{Piersma, T.},
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{Distinctly variable mudscapes: Distribution
+  gradients of intertidal macrofauna across the Dutch Wadden Sea }}.
+\newblock \bibinfo{journal}{Journal of Sea Research} \bibinfo{volume}{82},
+  \bibinfo{pages}{103 -- 116}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S1385110113000300},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/j.seares.2013.02.002}.
+  \bibinfo{note}{special issue: Proceedings of the International Symposium on
+  the Ecology of the Wadden Sea}.
+%Type = Article
+\bibitem[{Cozzi et~al.(2013)Cozzi, Broekhuis, McNutt and Schmid}]{cozzi2013}
+\bibinfo{author}{Cozzi, G.}, \bibinfo{author}{Broekhuis, F.},
+  \bibinfo{author}{McNutt, J.}, \bibinfo{author}{Schmid, B.},
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Density and habitat use of lions and spotted hyenas
+  in northern botswana and the influence of survey and ecological variables on
+  call-in survey estimation}.
+\newblock \bibinfo{journal}{Biodiversity and Conservation}
+  \bibinfo{volume}{22}, \bibinfo{pages}{2937--2956}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1007/s10531-013-0564-7},
+  \DOIprefix\doi{10.1007/s10531-013-0564-7}.
+%Type = Book
+\bibitem[{Diggle(2007)}]{diggle2007}
+\bibinfo{author}{Diggle, Peter J.and Ribeiro~Jr., P.J.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Model-based Geostatistics}.
+\newblock \bibinfo{publisher}{Springer}.
+%Type = Article
+\bibitem[{Fortin et~al.(1989)Fortin, Drapeau and Legendre}]{fortin1989}
+\bibinfo{author}{Fortin, M.J.}, \bibinfo{author}{Drapeau, P.},
+  \bibinfo{author}{Legendre, P.}, \bibinfo{year}{1989}.
+\newblock \bibinfo{title}{Spatial autocorrelation and sampling design in plant
+  ecology}.
+\newblock \bibinfo{journal}{Vegetatio} \bibinfo{volume}{83},
+  \bibinfo{pages}{pp. 209--222}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/20038496}.
+%Type = Article
+\bibitem[{Foster et~al.(2014)Foster, Hosack, Hill, Barrett and
+  Lucieer}]{foster2014}
+\bibinfo{author}{Foster, S.D.}, \bibinfo{author}{Hosack, G.R.},
+  \bibinfo{author}{Hill, N.A.}, \bibinfo{author}{Barrett, N.S.},
+  \bibinfo{author}{Lucieer, V.L.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Choosing between strategies for designing surveys:
+  autonomous underwater vehicles}.
+\newblock \bibinfo{journal}{Methods in Ecology and Evolution}
+  \bibinfo{volume}{5}, \bibinfo{pages}{287--297}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/2041-210X.12156},
+  \DOIprefix\doi{10.1111/2041-210X.12156}.
+%Type = Article
+\bibitem[{van Groenigen et~al.(1999)van Groenigen, Siderius and
+  Stein}]{vangroenigen1999}
+\bibinfo{author}{van Groenigen, J.}, \bibinfo{author}{Siderius, W.},
+  \bibinfo{author}{Stein, A.}, \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Constrained optimisation of soil sampling for
+  minimisation of the kriging variance}.
+\newblock \bibinfo{journal}{Geoderma} \bibinfo{volume}{87},
+  \bibinfo{pages}{239--259}.
+%Type = Article
+\bibitem[{Guisan and Thuiller(2005)}]{guisan2005}
+\bibinfo{author}{Guisan, A.}, \bibinfo{author}{Thuiller, W.},
+  \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Predicting species distribution: offering more than
+  simple habitat models}.
+\newblock \bibinfo{journal}{Ecology Letters} \bibinfo{volume}{8},
+  \bibinfo{pages}{993--1009}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.1461-0248.2005.00792.x},
+  \DOIprefix\doi{10.1111/j.1461-0248.2005.00792.x}.
+%Type = Article
+\bibitem[{Guisan and Zimmermann(2000)}]{guisan2000}
+\bibinfo{author}{Guisan, A.}, \bibinfo{author}{Zimmermann, N.},
+  \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{Predictive habitat distribution models in ecology}.
+\newblock \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{135},
+  \bibinfo{pages}{147--186}.
+%Type = Article
+\bibitem[{Hanberry et~al.(2012)Hanberry, He and Dey}]{hanberry2012}
+\bibinfo{author}{Hanberry, B.}, \bibinfo{author}{He, H.}, \bibinfo{author}{Dey,
+  D.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Sample sizes and model comparison metrics for species
+  distribution models}.
+\newblock \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{227},
+  \bibinfo{pages}{29 -- 33}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S0304380011005837},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/j.ecolmodel.2011.12.001}.
+%Type = Incollection
+\bibitem[{Hilbe and Greene(2007)}]{hilbe2007}
+\bibinfo{author}{Hilbe, J.}, \bibinfo{author}{Greene, W.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Count response regression models}, in:
+  \bibinfo{editor}{Rao, C.}, \bibinfo{editor}{Miller, J.},
+  \bibinfo{editor}{Rao, D.} (Eds.), \bibinfo{booktitle}{Epidemiology and
+  Medical Statistics}. \bibinfo{publisher}{Elsevier}. Elsevier Handbook of
+  Statistics Series.
+%Type = Article
+\bibitem[{Lambert(1992)}]{lambert1992}
+\bibinfo{author}{Lambert, D.}, \bibinfo{year}{1992}.
+\newblock \bibinfo{title}{{Zero-Inflated Poisson Regression, with an
+  Application to Defects in Manufacturing}}.
+\newblock \bibinfo{journal}{Technometrics} \bibinfo{volume}{34},
+  \bibinfo{pages}{pp. 1--14}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/1269547}.
+%Type = Article
+\bibitem[{Legendre et~al.(2002)Legendre, Dale, Fortin, Gurevitch, Hohn and
+  Myers}]{legendre2002}
+\bibinfo{author}{Legendre, P.}, \bibinfo{author}{Dale, M.R.T.},
+  \bibinfo{author}{Fortin, M.J.}, \bibinfo{author}{Gurevitch, J.},
+  \bibinfo{author}{Hohn, M.}, \bibinfo{author}{Myers, D.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{The consequences of spatial structure for the design
+  and analysis of ecological field surveys}.
+\newblock \bibinfo{journal}{Ecography} \bibinfo{volume}{25},
+  \bibinfo{pages}{pp. 601--615}.
+%Type = Article
+\bibitem[{Lewis et~al.(2011)Lewis, Butler and Gilbert}]{lewis2011}
+\bibinfo{author}{Lewis, F.}, \bibinfo{author}{Butler, A.},
+  \bibinfo{author}{Gilbert, L.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{A unified approach to model selection using the
+  likelihood ratio test}.
+\newblock \bibinfo{journal}{Methods in Ecology and Evolution}
+  \bibinfo{volume}{2}, \bibinfo{pages}{155--162}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.2041-210X.2010.00063.x},
+  \DOIprefix\doi{10.1111/j.2041-210X.2010.00063.x}.
+%Type = Article
+\bibitem[{Lyashevska et~al.(2016)Lyashevska, Brus and van~der
+  Meer}]{lyashevska2016a}
+\bibinfo{author}{Lyashevska, O.}, \bibinfo{author}{Brus, D.J.},
+  \bibinfo{author}{van~der Meer, J.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{Mapping species abundance by a spatial zero-inflated
+  Poisson model: a case study in the Wadden Sea, the Netherlands}}.
+\newblock \bibinfo{journal}{Ecology and Evolution} \URLprefix
+  \url{http://dx.doi.org/10.1002/ece3.1880}, \DOIprefix\doi{10.1002/ece3.1880}.
+%Type = Article
+\bibitem[{Martin et~al.(2005)Martin, Wintle, Rhodes, Kuhnert, Field, Low-Choy,
+  Tyre and Possingham}]{martin2005}
+\bibinfo{author}{Martin, T.G.}, \bibinfo{author}{Wintle, B.A.},
+  \bibinfo{author}{Rhodes, J.R.}, \bibinfo{author}{Kuhnert, P.M.},
+  \bibinfo{author}{Field, S.A.}, \bibinfo{author}{Low-Choy, S.J.},
+  \bibinfo{author}{Tyre, A.J.}, \bibinfo{author}{Possingham, H.P.},
+  \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Zero tolerance ecology: improving ecological
+  inference by modelling the source of zero observations}.
+\newblock \bibinfo{journal}{Ecology Letters} \bibinfo{volume}{8},
+  \bibinfo{pages}{1235--1246}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.1461-0248.2005.00826.x},
+  \DOIprefix\doi{10.1111/j.1461-0248.2005.00826.x}.
+%Type = Article
+\bibitem[{McBratney and Webster(1981)}]{mcbratney1981}
+\bibinfo{author}{McBratney, A.}, \bibinfo{author}{Webster, R.},
+  \bibinfo{year}{1981}.
+\newblock \bibinfo{title}{The design of optimal sampling schemes for local
+  estimation and mapping of regionalized variables-ii. program and examples}.
+\newblock \bibinfo{journal}{Computers and Geosciences} \bibinfo{volume}{7},
+  \bibinfo{pages}{335--365}.
+\newblock \bibinfo{note}{Cited By (since 1996) 53}.
+%Type = Article
+\bibitem[{Pearson et~al.(2007)Pearson, Raxworthy, Nakamura and
+  Townsend~Peterson}]{pearson2007}
+\bibinfo{author}{Pearson, R.G.}, \bibinfo{author}{Raxworthy, C.J.},
+  \bibinfo{author}{Nakamura, M.}, \bibinfo{author}{Townsend~Peterson, A.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Predicting species distributions from small numbers
+  of occurrence records: a test case using cryptic geckos in madagascar}.
+\newblock \bibinfo{journal}{Journal of Biogeography} \bibinfo{volume}{34},
+  \bibinfo{pages}{102--117}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.1365-2699.2006.01594.x},
+  \DOIprefix\doi{10.1111/j.1365-2699.2006.01594.x}.
+%Type = Article
+\bibitem[{Perner and Schueler(2004)}]{perner2004}
+\bibinfo{author}{Perner, J.}, \bibinfo{author}{Schueler, S.},
+  \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{Estimating the density of ground-dwelling arthropods
+  with pitfall traps using a nested-cross array}.
+\newblock \bibinfo{journal}{Journal of Animal Ecology} \bibinfo{volume}{73},
+  \bibinfo{pages}{pp. 469--477}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/3505657}.
+%Type = Article
+\bibitem[{Rachowicz et~al.(2006)Rachowicz, Hubbard and
+  Beissinger}]{rachowicz2006}
+\bibinfo{author}{Rachowicz, L.J.}, \bibinfo{author}{Hubbard, A.E.},
+  \bibinfo{author}{Beissinger, S.R.}, \bibinfo{year}{2006}.
+\newblock \bibinfo{title}{Evaluating at-sea sampling designs for marbled
+  murrelets using a spatially explicit model}.
+\newblock \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{196},
+  \bibinfo{pages}{329 -- 344}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S0304380006000731},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/j.ecolmodel.2006.02.011}.
+%Type = Article
+\bibitem[{Recta et~al.(2012)Recta, Haran and Rosenberger}]{recta2012}
+\bibinfo{author}{Recta, V.}, \bibinfo{author}{Haran, M.},
+  \bibinfo{author}{Rosenberger, J.L.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{A two-stage model for incidence and prevalence in
+  point-level spatial count data}.
+\newblock \bibinfo{journal}{Environmetrics} \bibinfo{volume}{23},
+  \bibinfo{pages}{162--174}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1002/env.1129}.
+%Type = Article
+\bibitem[{Reynolds et~al.(2011)Reynolds, Thompson and Russell}]{reynolds2011}
+\bibinfo{author}{Reynolds, J.H.}, \bibinfo{author}{Thompson, W.L.},
+  \bibinfo{author}{Russell, B.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Planning for success: Identifying effective and
+  efficient survey designs for monitoring}.
+\newblock \bibinfo{journal}{Biological Conservation} \bibinfo{volume}{144},
+  \bibinfo{pages}{1278 -- 1284}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S0006320710004970},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/j.biocon.2010.12.002}.
+%Type = Article
+\bibitem[{Rue et~al.(2009)Rue, Martino and Chopin}]{rue2009}
+\bibinfo{author}{Rue, H.}, \bibinfo{author}{Martino, S.},
+  \bibinfo{author}{Chopin, N.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Approximate bayesian inference for latent gaussian
+  models by using integrated nested laplace approximations}.
+\newblock \bibinfo{journal}{Journal of the Royal Statistical Society: Series B
+  (Statistical Methodology)} \bibinfo{volume}{71}, \bibinfo{pages}{319--392}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.1467-9868.2008.00700.x}.
+%Type = Article
+\bibitem[{Stockwell and Peterson(2002)}]{stockwell2002}
+\bibinfo{author}{Stockwell, D.R.}, \bibinfo{author}{Peterson, A.},
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Effects of sample size on accuracy of species
+  distribution models}.
+\newblock \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{148},
+  \bibinfo{pages}{1 -- 13}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S030438000100388X},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/S0304-3800(01)00388-X}.
+%Type = Article
+\bibitem[{Tyre et~al.(2003)Tyre, Tenhumberg, Field, Niejalke, Parris and
+  Possingham}]{tyre2003}
+\bibinfo{author}{Tyre, A.J.}, \bibinfo{author}{Tenhumberg, B.},
+  \bibinfo{author}{Field, S.A.}, \bibinfo{author}{Niejalke, D.},
+  \bibinfo{author}{Parris, K.}, \bibinfo{author}{Possingham, H.P.},
+  \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{Improving precision and reducing bias in biological
+  surveys: estimating false-negative error rates}.
+\newblock \bibinfo{journal}{Ecological Applications} \bibinfo{volume}{13},
+  \bibinfo{pages}{1790--1801}.
+%Type = Article
+\bibitem[{Vieira et~al.(2012)Vieira, Seneca and Sergio}]{vieira2012}
+\bibinfo{author}{Vieira, C.}, \bibinfo{author}{Seneca, A.},
+  \bibinfo{author}{Sergio, C.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Floristic and ecological survey of bryophytes from
+  portuguese watercourses}.
+\newblock \bibinfo{journal}{Cryptogamie, Bryologie} \bibinfo{volume}{33},
+  \bibinfo{pages}{113--134}.
+%Type = Book
+\bibitem[{Webster and Oliver(2007)}]{webster2007}
+\bibinfo{author}{Webster, R.}, \bibinfo{author}{Oliver, M.A.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Geostatistics for environmental Scientists}.
+\newblock \bibinfo{edition}{2} ed., \bibinfo{publisher}{John Wiley}.
+%Type = Article
+\bibitem[{Wisz et~al.(2008)Wisz, Hijmans, Li, Peterson, Graham, Guisan and
+  {NCEAS Predicting Species Distributions Working Group}}]{wisz2008}
+\bibinfo{author}{Wisz, M.S.}, \bibinfo{author}{Hijmans, R.J.},
+  \bibinfo{author}{Li, J.}, \bibinfo{author}{Peterson, A.T.},
+  \bibinfo{author}{Graham, C.H.}, \bibinfo{author}{Guisan, A.},
+  \bibinfo{author}{{NCEAS Predicting Species Distributions Working Group}},
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{Effects of sample size on the performance of species
+  distribution models}.
+\newblock \bibinfo{journal}{Diversity and Distributions} \bibinfo{volume}{14},
+  \bibinfo{pages}{763--773}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.1472-4642.2008.00482.x},
+  \DOIprefix\doi{10.1111/j.1472-4642.2008.00482.x}.
+%Type = Article
+\bibitem[{Zurell et~al.(2010)Zurell, Berger, Cabral, Jeltsch, Meynard,
+  M\"{u}nkem\"{u}ller, Nehrbass, Pagel, Reineking, Schr\"{o}der and
+  Grimm}]{zurell2010}
+\bibinfo{author}{Zurell, D.}, \bibinfo{author}{Berger, U.},
+  \bibinfo{author}{Cabral, J.S.}, \bibinfo{author}{Jeltsch, F.},
+  \bibinfo{author}{Meynard, C.N.}, \bibinfo{author}{M\"{u}nkem\"{u}ller, T.},
+  \bibinfo{author}{Nehrbass, N.}, \bibinfo{author}{Pagel, J.},
+  \bibinfo{author}{Reineking, B.}, \bibinfo{author}{Schr\"{o}der, B.},
+  \bibinfo{author}{Grimm, V.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{The virtual ecologist approach: simulating data and
+  observers}.
+\newblock \bibinfo{journal}{Oikos} \bibinfo{volume}{119},
+  \bibinfo{pages}{622--635}.
+\newblock \URLprefix \url{http://dx.doi.org/10.1111/j.1600-0706.2009.18284.x},
+  \DOIprefix\doi{10.1111/j.1600-0706.2009.18284.x}.
+
+\end{thebibliography}

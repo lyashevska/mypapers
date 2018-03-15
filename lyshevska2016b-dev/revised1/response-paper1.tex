@@ -1,0 +1,192 @@
+\documentclass{letter}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{geometry} 
+\geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{lineno}
+%\linenumbers
+\usepackage{color, soul}
+
+
+\begin{document}
+\begin{letter}{
+Professor Allen J. Moore\\
+Editor-in-Chief\\
+Ecology and Evolution \\
+\vspace{1cm}
+Re: \textbf{ID ECE-2015-08-00480}\\
+Title: `Mapping species abundance by a spatial zero-inflated Poisson model. A case study in the Wadden Sea, Netherlands'
+}
+
+\opening{Dear Professor Moore,}
+
+We are grateful for the very useful review of our manuscript which you recently supplied. We have followed it to revise our work which we now offer for consideration as a revised manuscript. 
+We have improved the precision of some definitions making it more accessible to an ecological audience and attended to the other comments from the reviewers as detailed below.  Additionally, we have supplied an organism photograph designated as Fig. 1.
+
+\textbf{Reviewer 1}\\
+
+General comments:\\
+\textbf{Comment:} The presented manuscript presents an interesting methodological approach for modelling spatially correlated zero-inflated abundance data. Therefore, the authors strongly rely on  generalised linear spatial models/generalised linear geostatistical models coming along with computationally demanding parameter estimation and simulation by means of MCMC/MCML methods. The approach is explained quite detailed for the example of modelling a bivalve species in the Dutch Wadden Sea. The presentation is clear, tables and figures are mostly necessary, but could partly moved to the supplementary online material (Table 2, Fig. 2).\\
+\textbf{Response:} 
+Thank you very much for your kind words about our paper. Table 2 is placed in the main text because it shows that the observed difference between the models was not due to the randomized allocation of zero observations to either true or false zeros, and, therefore, it is important. Fig. 2 (now Fig. 3) is also important because it demonstrates that the abundance data are clearly zero-inflated, which is the main theme of the manuscript. For these reasons we like to keep both in the main text.
+
+\textbf{Comment:} In my eyes, the presented approach has the potential to attract a large readership, since it addresses needs of a large scientific community (species distribution modellers). But the manuscript suffers from being not well linked to the wording and methodological basis of this community. The ms bases on terminologies used in spatial statistics and geostatistics (which is totally fine, since this is the methodology used); but for reaching the large community of ecologists applying statistical modelling approaches, it is necessary to adjust or at least supplement in the direction of this community. Without this effort, the readership will be much smaller and the proposed approach will not be widely used. So the ms needs to be revised for better meeting the potential readers' demands. \\
+\textbf{Response:} This is a very useful comment. To address this we have made a list of key terms that are not explained in the text and which we think might be unclear for the large community of ecologists. All terms were supplied with definitions and presented in the supplementary material (Table S.1).
+
+\textbf{Comment:} Some journals, which have a strong impact on methodological trends in ecology, e.g. Ecography, usually present R-code with exemplary data in online appendices. This certainly increases the amount of applications of new developments. So I strongly recommend adding well-documented code especially, if the approach is new and not easily digestible. This is a prerequisite for a greater distribution of useful approaches (cf., e.g., the working guide for boosted regression trees by Elith et al. 2008, J Anim Ecol, which boosted the application of this approach in the SDM community).\\ 
+\textbf{Response:} We strongly agree with this  comment and therefore we make available a detailed R-code in a form of knitr document via https://github.com/lyashevska/MappingZeroInflatedData. 
+
+\textbf{Comment:} The proposed approach is quite computer intensive. But since the approach is not compared to one or two standard approaches (e.g. the classical hurdle models according to Potts and Elith, or mboost, Buehlmann \& Hothorn et al. 2007). Such a comparison would answer the question: what do I gain for this computational extra cost? How much better is this approach? What errors do I avoid? The ms should deal with this topics more explicitly. Showing improvement compared to standard methods would be the best way to convince the readership.\\
+\textbf{Response:} We agree that comparison of our approach to other standard approaches would be beneficial. 
+We believe, however, that the detailed comparison is beyond the scope of the present paper which is already at a limit of number of words allowed. But again, such a comparison is interesting and we consider to follow this up.  
+
+\textbf{Comment:} Model performance: SDM-studies usually quantify the predictive performance by calculating the AUC (area under ROC curve) as a measure of discrimination. Here, only threshold-dependent accuracies are given. Producer's accuracies are known as sensitivity and specificity in the SDM literature. Additionally, explained deviance should be presented for quantifying model calibration. Even if the presented criteria are valid, giving the well known `standard criteria' allows classifying model results much better.\\
+\textbf{Response:} We focus here on user's and producer's accuracies, since this is the methodology used for accuracy assessment in geostatistical context which we adopted in this paper. We are aware that standard SDM-studies use the AUC to quantify the predictive performance, which, similarly to user's and producer's accuracies, is based on confusion matrices. A potential advantage of using the AUC is that it allows to investigate various thresholds, but we do not expect that various thresholds will have a major importance in our study. Our approach is another objective method of accuracy assessment, all our calculations are exemplified on Fig. 3 (now Fig. 4), which we expect to be sufficient for the readers with any background to understand our results.
+
+\textbf{Comment:} Classical SDM paper check explanatory variables for collinearity (Dormann et al. 2013, Ecography). Table 1. How strong is the correlation between silt and median grain size?\\ 
+\textbf{Response:} To address this comment the following sentence was added in the text on line 313: `Correlation between explanatory variables was not too large, with the maximum of -0.84 between silt and median grain size'.
+Additionally, we refer to Fig. 2 of the knitR document which can be found in the repository https://github.com/lyashevska/MappingZeroInflatedData.
+
+\textbf{Comment:} Additionally, the ecological interpretation of predictors should gain a bit more attention in the ms (they are even not mentioned at all in the abstract, only the two more or less inexpressive sets `small' vs. `large'). The discussion might also discuss this ecological issues.\\
+\textbf{Response:} The ecological interpretation of predictors is already discussed on lines 367-372.
+This comment is treated in more detail below. 
+
+\textbf{Comment:} Residual spatial autocorrelation: the authors should check model residuals for spatial autocorrelation by, for instance, presenting correlograms (cf. Dormann et al. 2007, Ecography). Maybe, this is one way to show the advantage of their approach compared to classical ones.\\
+\textbf{Response:} The residual spatial correlation was studied through variograms (graphs are not presented), but the final parameters are presented in Table 1.  Again, the choice of this technique is based on the geostatistical context of the study. A variogram is just another way of modelling spatial dependency.
+
+Detailed comments (in order of appearance):\\
+
+\textbf{Comment:} 
+No. Page, line 1 2, 52 `Abundance maps often to be preferred over presence-absence maps' Why? The explanation given later in this paragraph is fine. But for many taxa the uncertainty of abundance data is much higher than those of incidence data, which makes abundance maps more uncertain. This point might be discussed somewhere.\\
+\textbf{Response:} Yes, this may be the case for other taxa but certainly not for the organisms presented in this manuscript. We have added an explanation on line 58.
+
+\textbf{Comment:} 
+2 6, 160 `using by inverse distance weighting' replace by `by inverse distance weighting'. This approach needs to select an optimal power. Which value is used here? How is it derived? How strongly does this affect the subsequent analysis?\\
+\textbf{Response:} `using by inverse distance weighting' was replaced by  `by inverse distance squared weighting'.  The power of 2 was taken as optimal on the basis of leave-one-out procedure.
+
+\textbf{Comment:} 
+ 3 7, 181 `several times' -- sloppy and unspecific. What are the criteria to `obtain stable estimates'?\\
+\textbf{Response:} `several times' was replaced by `three times'. Parameter estimation by maximum likelihood in a generalized linear spatial model requires 
+repeated evaluations to reach stability of the parameters, i.e. evaluations should not result in a new value for a parameter.  
+
+\textbf{Comment:} 
+ 4 9, 248-9
+ GLSM -- this is already stated above (page 3)\\
+ \textbf{Response:} GLSM was removed on line 254.
+
+\textbf{Comment:} 
+ 5 Table 1. In `model large', there are positive coefficients for the linear and the quadratic term for altitude. Does this make sense? This does not produce a unimodal response, and might similarly be achieved by simply using the linear term. The comparison of the two groups of predictors (small vs. large) seems a bit arbitrary, since altitude is used in both, but altitude squared only in large. In my eyes is would be more sensible to use both terms (linear \& quadratic) in the small set, and the additional predictors in the large set. Alternatively, it would be even nicer to distinguish the two sets by the thematic content, i.e. soil-related predictors vs. soil-related predictors + spatial predictors (trend surface, i.e. altitude + coords).  \\  
+\textbf{Response:} Formal model selection was performed starting with a full specification that included all predictors and their quadratic terms. Using stepwise model selection (R function step) we observed an increase in AIC as predictors were dropped out, thus suggesting that the full model was the best. Yet, the difference between the full model and what we call the minimum model (which only includes the linear relationship with altitude and quadratic relationship with silt) is small. In almost all studies in macrobenthos-environment relationship (see e.g. van der Meer, 1991 J. Exp. Mar. Biol. Ecol., 148 (1991) 105-120) it turns out that altitude and sediment type are the main drivers. Formal comparison of models on the basis of AIC is computationally not feasible due to the presence of autocorrelation. As formal model selection procedure was not the main objective of this paper we have chosen only to show the results of the two extreme models: the full model and the minimum model. These changes are reflected on lines 226--233 of the manuscript.
+
+\textbf{Comment:}  5 Table 1. What is the reason for selecting spherical model?\\
+\textbf{Response:} The reason for selecting spherical model structure is that it provided the best (visual) fit into empirical semivariogram while allowing to reach the specified sill value. This was an arbitrary choice. The other model that we considered was exponential, but it approached the sill asymptotically, which was less suitable for our data.
+
+\textbf{Reviewer 2}\\
+
+\textbf{Comment:} 
+Abstract, 2 and elsewhere. Would prefer spatially correlated, not autocorrelated. Spatial autocorrelation usually refers to a specific linear spatial model (not used here). See also keywords.\\ 373. Terminology. Spatial correlation, not autocorrelation.\\
+\textbf{Response:} Agree, all occurrences of `auto-correlation' were replaced by `correlation' on lines 10, 25, 74, 134, 382. 
+
+\textbf{Comment:} 
+Abstract, 15-16 seems to suggest a hurdle model, not zero-inflation.\\
+\textbf{Response:} No, we mean zero-inflation. To avoid confusion we have changed `species intensity, when the species is present' into `species intensity, when the Bernoulli process predicts presence' in the abstract on line 16. 
+
+
+\textbf{Comment:} 
+98. Shouldn't the prob for a Poisson zero be $(1-\pi_{i})exp(-e^{\mu_{i}})$, assuming $\mu$ is the linear predictor?\\
+\textbf{Response:} We disagree, $\mu$ is not the linear predictor, $\mu$ is the expectation of $y$ given $x$. This expectation is related via $log$ to linear predictor.  See also eqn 1 Lambert, 1994.
+
+\textbf{Comment:} 
+138--144. Please give the sample size. (Not sure what it is from description.)\\
+\textbf{Response:} The total sample size of 4029 locations can be calculated as a sum of permanent locations (3451) and supplemented locations (578). This was added to the text on line 148.
+
+
+\textbf{Comment:} 
+162. Fig.2 needs to be redrawn, too much clumping at the origin. Better truncate the horizontal axis so that variation among small counts is more visible. The maximum value can then be given in the text.\\
+\textbf{Response:} We agree with this comment. Fig. 2 (now Fig. 3)  has been redrawn and updated in the text (page 23).
+
+\textbf{Comment:} 
+173+205 and elsewhere. Terminology: error terms, not residuals\\
+\textbf{Response:} We agree with this comment. Word `residuals' was replaced by `error terms'.
+
+\textbf{Comment:} 
+181.`Several times' is too vague\\
+\textbf{Response:} Corrected. See response to Reviewer 1.
+
+\textbf{Comment:} 
+237. Software should be cited before any add-on packages are cited.\\
+\textbf{Response:} Corrected on line 243.
+
+\textbf{Comment:} 
+313. The chi-square critical value for df=5 is 11.07, not 5.5. This computation needs to be clarified.\\
+\textbf{Response:} Clarified as $\frac{1}{2}\chi^2_{\alpha=0.05, df=5}$ on line 321.
+
+\textbf{Comment:} 
+343. One interpretation of the CV exercise (and also the test) could be that for prevalence the smaller set of regressors is sufficient. You note (203-204) that different sets of covariates are permitted in the predictors but you do not make use of this feature.\\
+\textbf{Response:} Indeed, we say that `The model parameters can be modelled by different sets of covariates'. Using the $\chi^2$ test and the CV we have shown that this can be the case. However, according to the $\chi^2$ test the model `large' should be preferred for prevalence, whereas according to the CV the model `small' should be preferred. Since the difference was marginal and comparison of different models was not the purpose of this study we have not made use of this feature. 
+
+\textbf{Comment:} 
+358. Before publication the analysis should be re-run using the latest version of the software. For R itself, this is currently 3.2-2 and will likely change again soon.\\
+\textbf{Response:} R version 3.2.2 (Fire Safety) has been released on 2015-08-14, whereas our manuscript was submitted on 2015-08-07.  We do not expect any changes in results using the latest version.
+
+\textbf{Comment:} 
+455. Ref. Tu (2002) looks garbled.\\
+\textbf{Response:} The reference was updated on line 463 according to `How to cite' requirements of the Wiley Online Library (http://onlinelibrary.wiley.com/doi/10.1002/9780470057339.vaz000g/abstract).
+
+\textbf{Comment:} 
+Table 1. Please give standard errors or t statistics along with estimates. Also give value of logLik or some other global measure. (See comment above.)\\
+\textbf{Response:} The values for logLik for both models were given in the text (line 320), therefore these values were omitted from the Table 1. 
+
+\textbf{Comment:} 
+Are the data available and if so where from?\\
+\textbf{Response:} Data is available at https://github.com/lyashevska/MappingZeroInflatedData.
+
+\textbf{Reviewer 3}\\
+
+\textbf{Comment:} 
+Although their method appears technically sound, if I understand what they did correctly, I do have some major concerns. My first concern has to do with the complexity of the methodology. Effectively the authors recommend a geostatistical mixed modelling approach, which is applied to both of the sub-models in ZIP regression (i.e., both logistic and poisson regression residuals were modelled with separate spatial variograms assuming that these residuals can be represented by a stochastic stationary process with zero mean and constant variance). Initially the logistic and poisson coefficients were estimated aspatially, followed by MCMC simulation to generate predictions at sample locations. MCML was then used to estimate regression and variogram coefficients, and these were used to create thousands of predicted values at sample locations. The sample locations were then subsampled and interpolated using simple kriging with an external drift (relying on their known ZIP model for the 'drift' term?).  At least that's how I understand what was done. The paper would really benefit from a good flow chart that articulates all of the steps involved, and why they were necessary, because as it stands their methods are difficult to follow.\\
+\textbf{Response:}
+The reviewer has perfectly understood the procedure as well as the other two. We tried to construct the flow chart but it does not add much to the point-by-point procedure that has already been given in Materials and methods. The procedure is simple with no loops.
+
+\textbf{Comment:} 
+On p7, they describe how regression coefficients and variogram parameters were estimated. Then they go on to say that `final parameter estimates for each submodel were used to simulate 100,000 or 50,000 transformed parameter values per sampling location'. Do they mean that MCML regression coefficients and associated variogram models were used via conditional Gaussian simulation to create 100,000 (or 50,000?) simulated values at each sampling location?  \\
+\textbf{Response:} Yes, that's correct. The MCML regression coefficients (beta's) and variogram models (silt, nugget, range) were used to simulate values at each sampling location. 
+
+\textbf{Comment:} 
+Given the complexity of the analysis, it would be worthwhile knowing whether their spatial model was actually an improvement. Why wouldn't the authors compare their aspatial models to their spatial models using log likelihoods, model selection techniques (e.g., AIC) and MSE based on tests with a reserved (independent validation) dataset that was not used for model fitting? \\
+\textbf{Response:} We again agree that comparison of our approach to other standard (aspatial) approaches would be very beneficial and will be considered as a follow up paper. For performance estimation we have deliberately chosen leave-one-out cross-validation method and not a holdout method as described by reviewer. This is due to the fact that leave-one-out method 
+gets more out of the data when a dataset is sparse.  Additionally,  validation by hold-out method poses a problem of deciding how to split a data set such that unbiased  and  valid  estimates of  map  accuracy  are  obtained.
+
+\textbf{Comment:} 
+the authors note that they estimate two variogram models for residuals of logistic and poisson models in the ZIPR though the residuals of this mixed model are obviously overlapping. It would be good if they could discuss this issue briefly. How could they improve their approach?\\
+\textbf{Response:} Modelling data as a single process would obviously improve the approach, but unfortunately it is not possible. For this reason we did not discuss this issue.  
+
+\textbf{Comment:} 
+eqn 1 should be for y = 0,1,2,3...\\
+\textbf{Response:} 
+eqn 1 is for y=0,1,2,3,\ldots but it has 2 parts and the second part is not relevant for $y=0$, due to the fact that Bernoulli part contains 0 and 1. See also eqn 1 in Lambert, 1992.
+
+\textbf{Comment:} 
+End of intro suggests that their objectives were to map abundance of bivalves in the Wadden Sea and quantify the accuracy of the map. However, the focus of the paper is more on the novelty of the statistical methods than the ecology of the species. Moreover, if accuracy assessment was an issue, I would have liked to see how their models performed on an independent validation dataset that was reserved from model fit (as mentioned above). This is a standard way to assess model fit and in my opinion is more reliable than leave one out cross-validation. \\
+\textbf{Response:} Indeed, this paper is focused on statistical methodology of mapping species abundance maps rather than the ecology of the species. As we replied above, we believe that for our data leave-one-out cross-validation is preferred. 
+
+\textbf{Comment:} 
+The writing is generally very good, but far too many paragraphs are 1-3 short sentences long and the thoughts represented have not been adequately developed to warrant a separate paragraph.\\
+\textbf{Response:} Agree, this comment has been addressed on lines 116, 223.
+
+\textbf{Comment:} 
+The colours on the figures suggest there are bivalves in locations where they were clearly absent. I would suggest that the authors use yellow for anything less than a probability of 0.5.\\
+\textbf{Response:} %We believe that the reviewer refers to the Fig. 5 (a,b) (now Fig. 6)  where we used the upper limit of 0.3 for the yellow. The value of 0.3 was the lower quartile, which produced more informative figures than those with the value of 0.5. 
+% To create a palette that works when printed in black and white, you really need colours that differ in brightness/lightness, as that’s the only aspect colour that is conserved in greyscale.
+% bpy.colors(n=3) and bpy.colors(n=4) package sp
+
+
+\end{letter}
+\end{document}

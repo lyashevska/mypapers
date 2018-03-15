@@ -1,0 +1,72 @@
+\documentclass{letter}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{geometry} 
+\geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{lineno}
+%\linenumbers
+\usepackage{color, soul}
+
+
+\begin{document}
+\begin{letter}{
+Professor Allen J. Moore\\
+Editor-in-Chief\\
+Ecology and Evolution \\
+\vspace{1cm}
+Re: \textbf{ID ECE-2015-08-00480}\\
+Title: `Mapping species abundance by a spatial zero-inflated Poisson model. A case study in the Wadden Sea, Netherlands'
+}
+
+\opening{Dear Professor Moore,}
+
+We are grateful for the very useful review of our manuscript which you recently supplied. We have followed it to revise our work which we now offer for consideration as a revised manuscript. 
+We have improved the precision of some definitions making it more accessible to an ecological audience and attended to the other comments from the reviewers as detailed below.  Additionally, we have supplied an organism photograph designated as Fig. 1.
+
+\textbf{Reviewer 1}\\
+
+General comments:\\
+
+\textbf{Comment:} \\
+\textbf{Response:}
+
+
+\textbf{Reviewer 2}\\
+
+Reviewer #2: Lyashevska et al. examine the influence of grid spacing on the accuracy of species distribution models for species that have zero-inflated abundance distributions and residual spatial autocorrelation using mixed models (i.e., ZIP model-based geostatistics). The measure of accuracy they use is mean square error (MSE) calculated using independent validation points sampled from a known spatial field, or the "pseudo reality" of a well-monitored benthic species, Macoma balthica. Pseudo reality was based on the observed distribution of M. balthica given realistic predictors in a ZIP model and covariance functions based on observed residual spatial autocorrelation. Their study is applicable to monitoring programs that use systematic sampling design strategies in which sampling locations are situated at the nodes of a grid (e.g., every 500 m). The broader questions of interest are: can rare species, or species with zero-inflated Poisson (ZIP) abundance distributions, be
+adequately sampled using widely spaced systematic grids? And, what is the trade-off between grid spacing and prediction accuracy? 
+Related work by Bijleveld et al. (2012) showed that there is indeed a trade-off between sample distance and prediction accuracy for species with normal distribution functions and spatially correlated residuals. Blijleveld et al. showed that this trade-off was relatively flat for virtual species with low amounts of spatial autocorrelation, indicating that widely spaced systematic samples would be adequate for these species; whereas for species that were strongly autocorrelated, the trade-off was steep, indicating that accuracy declined quickly when species distributions were more tightly clustered. As Bijleveld et al. did not investigate non-normal abundance distributions such as zero-inflated Poisson distributions, there is a gap in our understanding about the trade-off for rare species or species with zero-inflated distribution functions. For this reason, I believe that the subject addressed by this article is worthy of investigation and the information that they present is
+new.
+
+I have a couple of suggestions that might help to make the study more widely applicable, but I am not very attached to these suggestions. So I leave it up to the editor and the authors to decide whether or not further analysis are warranted. First, the authors do not examine the trade-off between sample spacing and prediction accuracy given various levels of residual spatial autocorrelation. They examine only one pseudo reality with a realistic level of spatial autocorrelation for a benthic species, and they find that beyond a spacing of 1600 m, the mean MSE increases quickly.  I expect that had the authors looked at a range of residual spatial structures from weakly correlated to strongly correlated, their findings would be similar to Bijleveld et al.' s. So their finding that MSE increases beyond a spacing of 1600 m is not particularly insightful without being able to understand what the trade-off might be (i.e., the trade-off between prediction accuracy and grid spacing)
+for rare species with weak or strong residual correlation structures. I can't help suspecting that mean MSE increases at a much faster rate beyond a grid-spacing that matches the range of their covariance functions. I do understand that there are significant computational challenges involved in simulating and analyzing the results for multiple species, but I do think that such an analysis would make the study more widely applicable. Second, one way to easily alleviate my suspicions that the ideal grid spacing matches or almost matches (i.e., is somewhat below) the range of the covariance function would be to show the values of these parameters in a table. These values could also be published in the body of the text. Perhaps a table of the hyperparameter values used to create the pseudo reality would be a nice addition?    i.e. with partial sill, nugget, range, and trend parameters      
+
+Specific comments: 
+1)	P1, L1: Environmental niche models and even habitat suitability models are special types of species distribution models (SDM's) with a particular purpose and theoretical foundation. I do not consider them to be equivalent to other species-environment models or SDM's. Please revise for greater clarity and descriptive accuracy. 
+2)	P1, L9: The sentence beginning with, "Knowledge of the …." Should be revised. This is the first time the authors have introduced either accuracy or cost, and both deserve further development. Please separate this sentence into two sentences. 
+3)	P2, L11: The authors write that effects of sample size on accuracy… was evaluated by few, but they go on to list several studies just in the last little while and I'm sure that this list does not represent an exhaustive search. I think they should start the sentence by saying something like, Several studies evaluated effects of sample size on SDM accuracy (e.g., …). 
+4)	P2, L24: Please expand very briefly (1 sentence) on why real datasets are problematic for studying effects of sampling design and sample size on accuracy. 
+5)	P2, L25: Sentence starting with 'These studies…' The word, 'these' in this context is ambiguous and could refer to either the Perner & Schueler … etc studies or the studies that use real data. Although it is obvious from the content of the sentence, a better writing style would be to begin the sentence with something like, 'Perner & Schueler (or whomever) recommend an updated approach whereby first… ' Or, 'An updated approach is to first simulate a spatial…'
+6)	P3, L53. 'Only few' is redundant. Begin with 'Few studies…'
+7)	P2, L60: Provide a reference or two to back up claim that most species will show the two properties of zero inflation and spatial autocorrelation.
+8)	Is there a threshold number of zeros beyond which you would consider a species distribution to be zero inflated? Are there any rules of thumb about this? 
+9)	Why was the grid square supplemented by exactly 578 locations? Is there anything significant about the number 578?
+10)	P6, L142: What is the text in the parenthesis about? (remind that the aim was to predict the model parameters..)
+11)	P9: L231: You write: "The difference in the sampling distributions of MSE reflects the contribution of the uncertainty about the hyperparameters to uncertainty about the predictions due to sampling errors in the estimated hyperparameters" I don't follow what the authors mean by this sentence. Please clarify. 
+Please go through the paper carefully and get rid of all superfluous 'the's' A good example sentence is as the one at L78 on P2. "The starting point of the our procedure for evaluating the sampling design is was a model for the spatial distribution of the zero-inflated and autocorrelated count data." It would be good to have the entire paper go through a final once over for grammar and language related issues. I caught many issues on paper, but there are too many to go through and my paper copy is too messy to scan and read. 
+
+Please also report what you did in past tense. Present tense is reserved for published results where you are reporting on what other people found, but you are reporting on accepted results, i.e., trends that are known. For example you could write, "The trade-off between sample spacing and prediction error is (known to be) rather flat for species with little spatial autocorrelation and rather steep for species that are strongly autocorrelated (Bijleveld et al. … ).  
+
+Overall the analysis seems sound and completely defensible. 
+The map is really impossible to read in greyscale and it would be better to use squares rather than circles in the legend b/c these are grids.
+It's a very nice touch that the authors provide the R-code and data as supporting information. 
+ 
+\end{letter}
+\end{document}

@@ -1,0 +1,14 @@
+Paper revised and resubmitted on 
+
+#to produce paper that shows differences
+#rename papers as before and after
+
+#find a diference
+latexdiff -t UNDERLINE paper-before.tex paper-after.tex >paper-diff.tex
+
+#compile paper like this:
+make PAPER=paper-diff.tex
+
+
+
+

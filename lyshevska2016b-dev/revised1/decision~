@@ -1,0 +1,160 @@
+Return-path: <ees.spasta.0.38a132.ce4763a8@eesmail.elsevier.com>
+Envelope-to: olga@herenstraat.nl
+Delivery-date: Thu, 14 Apr 2016 21:30:15 +0200
+Received: from p02c11o147.mxlogic.net ([208.65.144.80])
+	by neptunus.herenstraat.nl with esmtps (TLS1.0:DHE_RSA_AES_256_CBC_SHA1:256)
+	(Exim 4.82)
+	(envelope-from <ees.spasta.0.38a132.ce4763a8@eesmail.elsevier.com>)
+	id 1aqmxw-0006lG-T5
+	for olga@herenstraat.nl; Thu, 14 Apr 2016 21:30:15 +0200
+Received: from unknown [145.36.242.24] (EHLO ELSOXFEESP049.eesprod.elsevier.com)
+	by p02c11o147.mxlogic.net(mxl_mta-8.5.0-10) over TLS secured channel
+	with ESMTP id 3cfef075.0.433388.00-368.1193998.p02c11o147.mxlogic.net (envelope-from <ees.spasta.0.38a132.ce4763a8@eesmail.elsevier.com>);
+	Thu, 14 Apr 2016 13:30:16 -0600 (MDT)
+X-MXL-Hash: 570fefc831c4d085-7f20ad03f6673bcf4d35b6ecc9e32c8931a063ac
+Received: from ELSOXFEESP108.eesprod.elsevier.com ([145.36.215.170]) by ELSOXFEESP049.eesprod.elsevier.com with Microsoft SMTPSVC(8.5.9600.16384);
+	 Thu, 14 Apr 2016 20:29:50 +0100
+Received: from elsoxfeesp108 ([145.36.215.250]) by ELSOXFEESP108.eesprod.elsevier.com with Microsoft SMTPSVC(8.5.9600.16384);
+	 Thu, 14 Apr 2016 20:27:39 +0100
+MIME-Version: 1.0
+From: "Spatial Statistics" <spasta-itc@utwente.nl>
+Sender: ees.spasta.0.38a132.ce4763a8@eesmail.elsevier.com
+To: olga@herenstraat.nl
+Date: 14 Apr 2016 20:27:39 +0100
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+Message-ID: <ELSOXFEESP108SmLAzt00019409@ELSOXFEESP108.eesprod.elsevier.com>
+X-OriginalArrivalTime: 14 Apr 2016 19:27:39.0168 (UTC) FILETIME=[B4FAEA00:01D19683]
+X-AnalysisOut: [v=2.1 cv=WIR5KyYR c=1 sm=1 tr=0 a=d8eYhFMN7vYQksWYIVqcUg==]
+X-AnalysisOut: [:117 a=d8eYhFMN7vYQksWYIVqcUg==:17 a=IkcTkHD0fZMA:10 a=kzi]
+X-AnalysisOut: [v93cY1bsA:10 a=RyqeKeu5AAAA:8 a=pCZX88U-AAAA:8 a=4ZgGIQyYK]
+X-AnalysisOut: [Bs_Tv2p8BEA:9 a=LzXSl_e8BIPkyfEa:21 a=Y58sQBQpgdlCjiUP:21 ]
+X-AnalysisOut: [a=QEXdDO2ut3YA:10 a=lg0LnHjaeaMA:10]
+X-Spam: [F=0.5000000000; CM=0.500; MH=0.500(2016041416); S=0.200(2015072901)]
+X-MAIL-FROM: <ees.spasta.0.38a132.ce4763a8@eesmail.elsevier.com>
+X-SOURCE-IP: [145.36.242.24]
+Received-SPF: none
+X-SPF-Guess: error
+X-SA-Exim-Connect-IP: 208.65.144.80
+X-SA-Exim-Mail-From: ees.spasta.0.38a132.ce4763a8@eesmail.elsevier.com
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on neptunus
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.3 required=5.0 tests=HEADER_FROM_DIFFERENT_DOMAINS,
+	RCVD_IN_DNSWL_MED,RCVD_IN_MSPIKE_H3,RCVD_IN_MSPIKE_WL,SPF_PASS autolearn=ham
+	autolearn_force=no version=3.4.0
+Subject: Your Submission
+X-SA-Exim-Version: 4.2.1 (built Sun, 08 Jan 2012 02:45:44 +0000)
+X-SA-Exim-Scanned: Yes (on neptunus.herenstraat.nl)
+
+Ms. Ref. No.:  SPASTA-D-16-00008
+Title: Grid-spacing and the quality of abundance maps for species that show spatial autocorrelation and zero-inflation
+Spatial Statistics
+
+Dear Dr. Olga Lyashevska,
+
+Our reviewers and the associate editor have commented on your paper. 
+
+You will see that they are advising that you make moderate revisions to your manuscript. If you are prepared to undertake the work required, I would be pleased to view the revised version.  
+
+Given that the requested revisions are moderate the new version is required within 4 weeks. 
+
+Your revised paper would then be re-reviewed; therefore acceptance would still not be guaranteed.
+
+For your guidance, the review comments are appended below:
+
+Please carefully address the issues raised in the comments. 
+
+If you are submitting a revised manuscript, please also: 
+
+a) outline each change made (point by point) as raised in the reviewer comments
+    
+  AND/OR
+
+b) provide a suitable rebuttal to each reviewer comment not addressed
+
+
+To submit your revision, please do the following:
+
+1. Go to: http://ees.elsevier.com/spasta/
+
+2. Enter your login details 
+
+3. Click [Author Login]
+This takes you to the Author Main Menu.
+
+4. Click [Submissions Needing Revision]
+
+Please note that this journal offers a new, free service called AudioSlides: brief, webcast-style presentations that are shown next to published articles on ScienceDirect (see also http://www.elsevier.com/audioslides). If your paper is accepted for publication, you will automatically receive an invitation to create an AudioSlides presentation.
+
+I look forward to receiving your revised manuscript.
+
+Spatial Statistics features the Interactive Plot Viewer, see: http://www.elsevier.com/interactiveplots. Interactive Plots provide easy access to the data behind plots. To include one with your article, please prepare a .csv file with your plot data and test it online at http://authortools.elsevier.com/interactiveplots/verification before submission as supplementary material.
+
+PLEASE NOTE: The journal would like to enrich online articles by visualising and providing geographical details described in Spatial Statistics articles. For this purpose, corresponding KML (GoogleMaps) files can be uploaded in our online submission system. Submitted KML files will be published with your online article on ScienceDirect. Elsevier will generate maps from the KML files and include them in the online article.
+
+Spatial Statistics features the Interactive Map Viewer, http://www.elsevier.com/googlemaps. Interactive Maps visualize geospatial data provided by the author in a GoogleMap. To include one with your article, please submit a .kml or .kmz file and test it online at http://elsevier-apps.sciverse.com/GoogleMaps/verification before uploading it with your submission.
+
+PLEASE NOTE: Spatial Statistics would like to enrich its online articles by providing readers with access to relevant information and data. Hence, if applicable please include the following accession numbers and identifiers in the method section of your article: GenBank accession numbers, antibody identifiers, species specific nomenclatures, and software identifiers. All accession numbers and identifiers referenced to in your article will be converted into embedded article enrichments or links to corresponding data repositories, which will appear in the online version of the article on ScienceDirect . The complete set of recommendations with detailed instructions is available at: http://www.elsevier.com/about/content-innovation/minimal-data-standards
+
+PLEASE NOTE: Spatial Statistics would like to enrich its relevant online articles with a R-code viewer that allows the reader to view and explore the underlying research R-code and data. Hence, if applicable, we would like to invite you to upload with your manuscript R-code (in .R  file format) and (example) data set (in .TXT, .CSV, .XLS or .DAT format) as supplementary material to our online submission system. Elsevier will generate the viewer for your R-code and include it with the online article on ScienceDirect.
+
+Yours sincerely,
+ 
+Alfred Stein
+Editor in Chief
+Spatial Statistics
+
+Note: While submitting the revised manuscript, please double check the author names provided in the submission so that authorship related changes are made in the revision stage. If your manuscript is accepted, any authorship change will involve approval from co-authors and respective editor handling the submission and this may cause a significant delay in publishing your manuscript.
+
+Reviewers' comments:
+
+this mns has been reviewed by two external reviewers and me as AE handling the paper. It deals with an interesting and timely topic, but we all feel that the authors need a new round over the paper. There are many specific comments rised by the reviewers that should be completely taken into account in a revised version. I concur with the reviewers in asking for a major/moderate revision to be further read and reviewed.
+
+
+Reviewer #1: See attachment
+
+
+
+Reviewer #2: Lyashevska et al. examine the influence of grid spacing on the accuracy of species distribution models for species that have zero-inflated abundance distributions and residual spatial autocorrelation using mixed models (i.e., ZIP model-based geostatistics). The measure of accuracy they use is mean square error (MSE) calculated using independent validation points sampled from a known spatial field, or the "pseudo reality" of a well-monitored benthic species, Macoma balthica. Pseudo reality was based on the observed distribution of M. balthica given realistic predictors in a ZIP model and covariance functions based on observed residual spatial autocorrelation. Their study is applicable to monitoring programs that use systematic sampling design strategies in which sampling locations are situated at the nodes of a grid (e.g., every 500 m). The broader questions of interest are: can rare species, or species with zero-inflated Poisson (ZIP) abundance distributions, be
+adequately sampled using widely spaced systematic grids? And, what is the trade-off between grid spacing and prediction accuracy? 
+Related work by Bijleveld et al. (2012) showed that there is indeed a trade-off between sample distance and prediction accuracy for species with normal distribution functions and spatially correlated residuals. Blijleveld et al. showed that this trade-off was relatively flat for virtual species with low amounts of spatial autocorrelation, indicating that widely spaced systematic samples would be adequate for these species; whereas for species that were strongly autocorrelated, the trade-off was steep, indicating that accuracy declined quickly when species distributions were more tightly clustered. As Bijleveld et al. did not investigate non-normal abundance distributions such as zero-inflated Poisson distributions, there is a gap in our understanding about the trade-off for rare species or species with zero-inflated distribution functions. For this reason, I believe that the subject addressed by this article is worthy of investigation and the information that they present is
+new.
+ 
+I have a couple of suggestions that might help to make the study more widely applicable, but I am not very attached to these suggestions. So I leave it up to the editor and the authors to decide whether or not further analysis are warranted. First, the authors do not examine the trade-off between sample spacing and prediction accuracy given various levels of residual spatial autocorrelation. They examine only one pseudo reality with a realistic level of spatial autocorrelation for a benthic species, and they find that beyond a spacing of 1600 m, the mean MSE increases quickly.  I expect that had the authors looked at a range of residual spatial structures from weakly correlated to strongly correlated, their findings would be similar to Bijleveld et al.' s. So their finding that MSE increases beyond a spacing of 1600 m is not particularly insightful without being able to understand what the trade-off might be (i.e., the trade-off between prediction accuracy and grid spacing)
+for rare species with weak or strong residual correlation structures. I can't help suspecting that mean MSE increases at a much faster rate beyond a grid-spacing that matches the range of their covariance functions. I do understand that there are significant computational challenges involved in simulating and analyzing the results for multiple species, but I do think that such an analysis would make the study more widely applicable. Second, one way to easily alleviate my suspicions that the ideal grid spacing matches or almost matches (i.e., is somewhat below) the range of the covariance function would be to show the values of these parameters in a table. These values could also be published in the body of the text. Perhaps a table of the hyperparameter values used to create the pseudo reality would be a nice addition?    i.e. with partial sill, nugget, range, and trend parameters      
+
+Specific comments: 
+1)	P1, L1: Environmental niche models and even habitat suitability models are special types of species distribution models (SDM's) with a particular purpose and theoretical foundation. I do not consider them to be equivalent to other species-environment models or SDM's. Please revise for greater clarity and descriptive accuracy. 
+2)	P1, L9: The sentence beginning with, "Knowledge of the …." Should be revised. This is the first time the authors have introduced either accuracy or cost, and both deserve further development. Please separate this sentence into two sentences. 
+3)	P2, L11: The authors write that effects of sample size on accuracy… was evaluated by few, but they go on to list several studies just in the last little while and I'm sure that this list does not represent an exhaustive search. I think they should start the sentence by saying something like, Several studies evaluated effects of sample size on SDM accuracy (e.g., …). 
+4)	P2, L24: Please expand very briefly (1 sentence) on why real datasets are problematic for studying effects of sampling design and sample size on accuracy. 
+5)	P2, L25: Sentence starting with 'These studies…' The word, 'these' in this context is ambiguous and could refer to either the Perner & Schueler … etc studies or the studies that use real data. Although it is obvious from the content of the sentence, a better writing style would be to begin the sentence with something like, 'Perner & Schueler (or whomever) recommend an updated approach whereby first… ' Or, 'An updated approach is to first simulate a spatial…'
+6)	P3, L53. 'Only few' is redundant. Begin with 'Few studies…'
+7)	P2, L60: Provide a reference or two to back up claim that most species will show the two properties of zero inflation and spatial autocorrelation.
+8)	Is there a threshold number of zeros beyond which you would consider a species distribution to be zero inflated? Are there any rules of thumb about this? 
+9)	Why was the grid square supplemented by exactly 578 locations? Is there anything significant about the number 578?
+10)	P6, L142: What is the text in the parenthesis about? (remind that the aim was to predict the model parameters..)
+11)	P9: L231: You write: "The difference in the sampling distributions of MSE reflects the contribution of the uncertainty about the hyperparameters to uncertainty about the predictions due to sampling errors in the estimated hyperparameters" I don't follow what the authors mean by this sentence. Please clarify. 
+Please go through the paper carefully and get rid of all superfluous 'the's' A good example sentence is as the one at L78 on P2. "The starting point of the our procedure for evaluating the sampling design is was a model for the spatial distribution of the zero-inflated and autocorrelated count data." It would be good to have the entire paper go through a final once over for grammar and language related issues. I caught many issues on paper, but there are too many to go through and my paper copy is too messy to scan and read. 
+
+Please also report what you did in past tense. Present tense is reserved for published results where you are reporting on what other people found, but you are reporting on accepted results, i.e., trends that are known. For example you could write, "The trade-off between sample spacing and prediction error is (known to be) rather flat for species with little spatial autocorrelation and rather steep for species that are strongly autocorrelated (Bijleveld et al. … ).  
+
+Overall the analysis seems sound and completely defensible. 
+
+The map is really impossible to read in greyscale and it would be better to use squares rather than circles in the legend b/c these are grids.
+
+It's a very nice touch that the authors provide the R-code and data as supporting information. 
+ 
+
+
+
+
+
+http://ees.elsevier.com/spasta/l.asp?i=13803&l=19HXLZFO  
+Please note that editors and/or reviewers have uploaded files related to this submission. To access these file(s) while you are not logged into the system, please click on the link below. (Note: this link will expire after 5 clicks or 30 days.) Alternatively, you may log in to the system and click the 'View Review Attachments' link in the Action column.
+******************************************
+Please note that the editorial process varies considerably from journal to journal. To view a sample editorial process, please click here:
+http://ees.elsevier.com/eeshelp/sample_editorial_process.pdf
+
+For further assistance, please visit our customer support site at http://help.elsevier.com/app/answers/list/p/7923. Here you can search for solutions on a range of topics, find answers to frequently asked questions and learn more about EES via interactive tutorials. You will also find our 24/7 support contact details should you need any further assistance from one of our customer support representatives.
+
