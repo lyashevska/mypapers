@@ -1,14 +1,21 @@
 import bibtexparser
 import os
+import re
+
+def escape_markdown(text):
+    """Escape common Markdown special characters."""
+    return re.sub(r'([\\`*_{}\[\]()#+\-!])', r'\\\1', text)
 
 def bibtex_to_markdown(entry):
-    authors = entry.get("author", "Unknown").replace("\n", " ")
-    title = entry.get("title", "No title").strip("{}")
+    raw_title = entry.get("title", "No title")
+    title = escape_markdown(raw_title.replace("\n", " ").strip("{}"))
+
+    authors = escape_markdown(entry.get("author", "Unknown").replace("\n", " "))
     year = entry.get("year", "n.d.")
-    journal = entry.get("journal") or entry.get("booktitle", "")
+    journal = escape_markdown(entry.get("journal", "") or entry.get("booktitle", ""))
     doi = entry.get("doi", "")
     url = entry.get("url", "")
-    abstract = entry.get("abstract", "").strip()
+    abstract = escape_markdown(entry.get("abstract", "").strip())
 
     citation = f"- **{title}**  \n  {authors} ({year})."
     if journal:
@@ -25,7 +32,6 @@ def bibtex_to_markdown(entry):
     return citation
 
 def convert_bib_files_to_md():
-    # Get all .bib files in the current directory
     bib_files = [f for f in os.listdir('.') if f.endswith('.bib')]
     all_entries = []
 
@@ -34,7 +40,6 @@ def convert_bib_files_to_md():
             bib_database = bibtexparser.load(bibtex_file)
             all_entries.extend(bib_database.entries)
 
-    # Sort by year (descending), fallback to 0 if year missing or invalid
     def safe_year(entry):
         try:
             return int(entry.get("year", 0))
@@ -43,7 +48,6 @@ def convert_bib_files_to_md():
 
     all_entries.sort(key=safe_year, reverse=True)
 
-    # Write to Markdown file
     with open("publications.md", "w", encoding="utf-8") as out_md:
         out_md.write("# Publications\n\n")
         for entry in all_entries:
