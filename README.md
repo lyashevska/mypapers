@@ -1,6 +1,6 @@
 ## About
 This repository contains my personal scientific publications. 
 
-## 📚 Publications
+<!-- PUBLICATIONS START -->
+<!-- PUBLICATIONS END -->
 
-See the full list in [publications.md](./publications.md)

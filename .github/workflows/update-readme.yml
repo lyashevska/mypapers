@@ -1,0 +1,45 @@
+name: Update README with Publications
+
+on:
+  push:
+    paths:
+      - '**.bib'
+      - 'bib_to_md.py'
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install bibtexparser
+
+      - name: Run script to update publications
+        run: python bib_to_md.py
+
+      - name: Insert publications into README
+        run: |
+          awk '/<!-- PUBLICATIONS START -->/,/<!-- PUBLICATIONS END -->/ {next} 1' README.md > tmp.md
+          echo '<!-- PUBLICATIONS START -->' >> tmp.md
+          echo '## 📚 Publications' >> tmp.md
+          tail -n +2 publications.md >> tmp.md  # skip title line
+          echo '<!-- PUBLICATIONS END -->' >> tmp.md
+          mv tmp.md README.md
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Auto-update README with publications" || echo "No changes to commit"
+          git push
+
