@@ -25,7 +25,8 @@ def format_entry(entry):
         first = ' '.join(parts[:-1])
         return f"{last}, {first}"
     authors_list = [normalize_name(a) for a in raw_authors.split(' and ') if a.strip()]
-    authors = ', '.join(authors_list)
+    # separate multiple authors with a semicolon for clarity
+    authors = '; '.join(authors_list)
     title = entry.get('title', '')
     # strip surrounding braces commonly used in bibtex titles
     title = title.strip().strip('{}')
