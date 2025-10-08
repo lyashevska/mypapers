@@ -68,7 +68,12 @@ def main():
             print(f"Warning: failed to read {bibfile}: {e}")
 
     # Sort newest first (missing years come last)
-    all_entries.sort(key=lambda e: e.get('year', ''), reverse=True)
+    def year_key(e):
+        try:
+            return int(e.get('year', ''))
+        except (ValueError, TypeError):
+            return -1  # Missing/invalid years sort last (reverse=True)
+    all_entries.sort(key=year_key, reverse=True)
 
     lines = ['## 📚 Publications']
     for entry in all_entries:
