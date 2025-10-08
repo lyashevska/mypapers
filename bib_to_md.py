@@ -1,58 +1,82 @@
-import bibtexparser
 import os
-import re
+import glob
+import bibtexparser
 
-def escape_markdown(text):
-    """Escape common Markdown special characters."""
-    return re.sub(r'([\\`*_{}\[\]()#+\-!])', r'\\\1', text)
 
-def bibtex_to_markdown(entry):
-    raw_title = entry.get("title", "No title")
-    title = escape_markdown(raw_title.replace("\n", " ").strip("{}"))
+def format_entry(entry):
+    """Format one bib entry nicely in Markdown."""
+    authors = entry.get('author', '').replace('\n', ' ').replace(' and ', ', ')
+    title = entry.get('title', '')
+    # strip surrounding braces commonly used in bibtex titles
+    title = title.strip().strip('{}')
+    year = entry.get('year', '')
+    journal = entry.get('journal') or entry.get('booktitle', '')
+    key = entry.get('ID', '')
 
-    authors = escape_markdown(entry.get("author", "Unknown").replace("\n", " "))
-    year = entry.get("year", "n.d.")
-    journal = escape_markdown(entry.get("journal", "") or entry.get("booktitle", ""))
-    doi = entry.get("doi", "")
-    url = entry.get("url", "")
-    abstract = escape_markdown(entry.get("abstract", "").strip())
+    # Remove line breaks and extra spaces
+    authors = ' '.join(authors.split())
 
-    citation = f"- **{title}**  \n  {authors} ({year})."
+    # Build file paths: repository enforces bib/ and pdf/ directories
+    bib_candidates = [f"bib/{key}.bib", f"bib/{key}.bibtex"]
+    pdf_candidates = [f"pdf/{key}.pdf"]
+
+    bib_link = ''
+    for p in bib_candidates:
+        if os.path.exists(p):
+            bib_link = f"[BibTeX]({p})"
+            break
+
+    pdf_link = ''
+    for p in pdf_candidates:
+        if os.path.exists(p):
+            pdf_link = f"[PDF]({p})"
+            break
+
+    links = " | ".join([link for link in [pdf_link, bib_link] if link])
+
+    # Format Markdown line
+    parts = [f"- **{authors}**"]
+    if year:
+        parts.append(f"({year}).")
+    parts.append(f"*{title}.*")
     if journal:
-        citation += f" _{journal}_."
+        parts.append(f"_{journal}._")
+    if links:
+        parts.append(links)
 
-    if doi:
-        citation += f" [DOI](https://doi.org/{doi})"
-    elif url:
-        citation += f" [Link]({url})"
+    return ' '.join(parts).strip()
 
-    if abstract:
-        citation += f"\n\n  > {abstract}"
 
-    return citation
+def main():
+    # Collect .bib and .bibtex files from bib/ directory only
+    bib_files = []
+    if os.path.isdir('bib'):
+        bib_files.extend(glob.glob('bib/*.bib'))
+        bib_files.extend(glob.glob('bib/*.bibtex'))
 
-def convert_bib_files_to_md():
-    bib_files = [f for f in os.listdir('.') if f.endswith('.bib')]
+    # remove duplicates and keep stable order
+    bib_files = list(dict.fromkeys(bib_files))
+
     all_entries = []
 
-    for bib_file in bib_files:
-        with open(bib_file, encoding="utf-8") as bibtex_file:
-            bib_database = bibtexparser.load(bibtex_file)
-            all_entries.extend(bib_database.entries)
-
-    def safe_year(entry):
+    for bibfile in bib_files:
         try:
-            return int(entry.get("year", 0))
-        except ValueError:
-            return 0
+            with open(bibfile, encoding='utf-8') as bibtex_file:
+                bib_database = bibtexparser.load(bibtex_file)
+                all_entries.extend(bib_database.entries)
+        except Exception as e:
+            print(f"Warning: failed to read {bibfile}: {e}")
 
-    all_entries.sort(key=safe_year, reverse=True)
+    # Sort newest first (missing years come last)
+    all_entries.sort(key=lambda e: e.get('year', ''), reverse=True)
 
-    with open("publications.md", "w", encoding="utf-8") as out_md:
-        out_md.write("# Publications\n\n")
-        for entry in all_entries:
-            out_md.write(bibtex_to_markdown(entry) + "\n\n")
+    lines = ['## 📚 Publications']
+    for entry in all_entries:
+        lines.append(format_entry(entry))
 
-if __name__ == "__main__":
-    convert_bib_files_to_md()
+    with open('publications.md', 'w', encoding='utf-8') as out:
+        out.write('\n'.join(lines))
 
+
+if __name__ == '__main__':
+    main()

@@ -72,3 +72,22 @@ This repository contains my personal scientific publications.
   > Biodiversity is a measure of the total difference within a biological system. It is understood to arise at genetic, species and multiple levels of community organisation, hence is multidimensional in nature. Biodiversity indices have proliferated in attempts to capture this complexity but may now have confounded it. Here we attempt a reduction to the minimal set of metrics needed to describe biodiversity \(often by default taken to be species richness\). 1000 model communities with realistic taxonomic composition were synthesised using databases of marine benthic species. A battery of 19 biodiversity indices were calculated for every community and analysed by \\\{PCA\\\} to show inter\-dependence and sensitivity to variation in taxonomic \(a surrogate for genetic\), functional \(based on ecological roles\) and structural \(based on species abundance\) diversity. We found the three major axes of biodiversity were \(a\) structural complexity, and \(b\) two different mixtures of taxonomic and functional diversity: it was well approximated by a three\-dimensional space of these variables. A scalar distance from the origin of this space could serve as a single valued summary where needed, for example in economic valuations. The most widely used single biodiversity measure – species richness – missed 88.6% of the diversity, emphasising the importance of additional characters and the need for species databases to record functional traits, presence and abundance in communities, and phylogenetic information.
 
 <!-- PUBLICATIONS END -->
+
+## Development environment
+
+This repo uses a local venv (created in `.venv`) and a pinned `requirements.txt` for reproducible runs.
+
+Create/activate the venv and install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run the generator and verifier:
+
+```bash
+python bib_to_md.py
+python verify_publications.py
+```
