@@ -5,7 +5,27 @@ import bibtexparser
 
 def format_entry(entry):
     """Format one bib entry nicely in Markdown."""
-    authors = entry.get('author', '').replace('\n', ' ').replace(' and ', ', ')
+    raw_authors = entry.get('author', '').replace('\n', ' ')
+    # Parse authors into a list and normalize to 'Lastname, Firstname' where possible
+    def normalize_name(name: str) -> str:
+        name = name.strip()
+        if not name:
+            return ''
+        # If name already contains a comma, assume 'Last, First' format
+        if ',' in name:
+            parts = [p.strip() for p in name.split(',', 1)]
+            last = parts[0]
+            first = parts[1]
+            return f"{last}, {first}" if first else last
+        # Otherwise, assume 'First Middle Last' -> 'Last, First Middle'
+        parts = name.split()
+        if len(parts) == 1:
+            return parts[0]
+        last = parts[-1]
+        first = ' '.join(parts[:-1])
+        return f"{last}, {first}"
+    authors_list = [normalize_name(a) for a in raw_authors.split(' and ') if a.strip()]
+    authors = ', '.join(authors_list)
     title = entry.get('title', '')
     # strip surrounding braces commonly used in bibtex titles
     title = title.strip().strip('{}')
@@ -39,8 +59,30 @@ def format_entry(entry):
     if year:
         parts.append(f"({year}).")
     parts.append(f"*{title}.*")
+
+    # Journal + optional volume/number/pages
     if journal:
-        parts.append(f"_{journal}._")
+        vol = entry.get('volume', '').strip()
+        num = entry.get('number', '').strip()
+        pages = entry.get('pages', '').strip()
+
+        journal_part = f"_{journal}._"
+        volparts = ''
+        if vol:
+            volparts += vol
+            if num:
+                volparts += f"({num})"
+        if pages:
+            if volparts:
+                volparts += f": {pages}"
+            else:
+                volparts = f"{pages}"
+
+        if volparts:
+            journal_part = f"{journal_part} {volparts}."
+
+        parts.append(journal_part)
+
     if links:
         parts.append(links)
 
