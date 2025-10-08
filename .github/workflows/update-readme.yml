@@ -21,7 +21,8 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install bibtexparser
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install bibtexparser; fi
 
       - name: Run script to update publications
         run: python bib_to_md.py
@@ -34,6 +35,9 @@ jobs:
           tail -n +2 publications.md >> tmp.md  # skip title line
           echo '<!-- PUBLICATIONS END -->' >> tmp.md
           mv tmp.md README.md
+
+      - name: Verify README includes all bib keys
+        run: python scripts/verify_readme_bibs.py
 
       - name: Commit and push changes
         run: |
