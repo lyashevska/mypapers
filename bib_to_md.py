@@ -93,12 +93,21 @@ def format_entry(entry):
 def main():
     # Collect .bib and .bibtex files from bib/ directory only
     bib_files = []
-    if os.path.isdir('bib'):
-        bib_files.extend(glob.glob('bib/*.bib'))
-        bib_files.extend(glob.glob('bib/*.bibtex'))
+    if not os.path.isdir('bib'):
+        print("ERROR: bib/ directory not found")
+        print("Please create a bib/ directory and add .bib or .bibtex files to it.")
+        return 1
+    
+    bib_files.extend(glob.glob('bib/*.bib'))
+    bib_files.extend(glob.glob('bib/*.bibtex'))
+
+    if not bib_files:
+        print("ERROR: No .bib or .bibtex files found in bib/ directory")
+        return 1
 
     # remove duplicates and keep stable order
     bib_files = list(dict.fromkeys(bib_files))
+    print(f"Found {len(bib_files)} bib file(s)")
 
     all_entries = []
 
@@ -106,9 +115,21 @@ def main():
         try:
             with open(bibfile, encoding='utf-8') as bibtex_file:
                 bib_database = bibtexparser.load(bibtex_file)
+                if not bib_database.entries:
+                    print(f"Warning: {bibfile} contains no entries")
+                else:
+                    print(f"  ✓ {bibfile}: {len(bib_database.entries)} entry(ies)")
                 all_entries.extend(bib_database.entries)
+        except FileNotFoundError:
+            print(f"ERROR: File not found: {bibfile}")
+            return 1
         except Exception as e:
-            print(f"Warning: failed to read {bibfile}: {e}")
+            print(f"ERROR: Failed to read {bibfile}: {e}")
+            return 1
+
+    if not all_entries:
+        print("ERROR: No valid entries found in any bib file")
+        return 1
 
     # Sort newest first (missing years come last)
     def year_key(e):
@@ -122,9 +143,15 @@ def main():
     for entry in all_entries:
         lines.append(format_entry(entry))
 
-    with open('publications.md', 'w', encoding='utf-8') as out:
-        out.write('\n'.join(lines))
+    try:
+        with open('publications.md', 'w', encoding='utf-8') as out:
+            out.write('\n'.join(lines))
+        print(f"\n✅ Generated publications.md with {len(all_entries)} publication(s)")
+        return 0
+    except Exception as e:
+        print(f"ERROR: Failed to write publications.md: {e}")
+        return 1
 
 
 if __name__ == '__main__':
-    main()
+    exit(main())

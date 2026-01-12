@@ -4,8 +4,55 @@ I am a research software engineer and data scientist working across machine lear
 
 My publications reflect this mix: methodological contributions in statistical and machine-learning methods (for example, handling class imbalance and spatial zero-inflation), applied ecological and marine science studies (long-term species trends, gelatinous zooplankton, microplastics), and translational work in medical data analysis. I prefer practical, well-documented code and reproducible workflows that make analyses reusable across projects.
 
+
+## How this repository works
+
+This repository is designed to keep publications (BibTeX entries and PDFs) together and to regenerate the publications list automatically in CI.
+
+Key points:
+
+- Place BibTeX files in the `bib/` directory and PDFs in the `pdf/` directory.
+- Use the same key/name for a publication's BibTeX and PDF files. For example, for a publication with key `lyashevska2016a` provide `bib/lyashevska2016a.bib` and (optionally) `pdf/lyashevska2016a.pdf`.
+- The generator script `bib_to_md.py` reads the files in `bib/`, normalizes author names, adds available metadata (volume/number/pages), and writes a generated `publications.md` (used as an intermediate artifact).
+
+What CI does:
+
+- The GitHub Actions workflow (`.github/workflows/update-readme.yml`) checks out the repository and installs Python dependencies (from `requirements.txt` when present).
+- Before committing the updated README, CI runs `scripts/verify_readme_bibs.py` which ensures that every BibTeX key found under `bib/` is referenced in the publications block; the workflow fails if keys are missing.
+- The workflow commits only the updated `README.md` (the generated `publications.md` is an intermediate artifact and does not need to be tracked).
+
+
+### Testing locally
+
+Before pushing changes, run `./test.sh` to verify everything works:
+
+```bash
+./test.sh
+```
+
+This script mirrors the CI workflow and will:
+1. Check Python environment
+2. Install dependencies
+3. Generate publications.md
+4. Update README
+5. Verify all bib files are referenced
+
+If it passes locally, CI will pass on GitHub.
+
+**First-time setup:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Tips:**
+- Keep file keys consistent: matching names between `bib/{key}.bib` and `pdf/{key}.pdf`
+- See `DEVNOTES.md` for additional developer notes
+
 <!-- PUBLICATIONS START -->
 ## 📚 Publications
+- **Klimesova, Bela; O'Dwyer, Katie; D'Arcy, Jack; Talbot, Anita; Lyashevska, Olga; Rodger, Hamish; McManus, Catherine; Ruane, Neil M.** (2026). *Assessing Sea lice infection levels in Irish Atlantic salmon farms: Metrics and treatment trigger levels.* _Aquaculture._ 614: 743568. [PDF](pdf/klimesova2026.pdf) | [BibTeX](bib/klimesova2026.bib)
 - **Farmani, Vahid; Kniep, Helge; Maros, Mate E.; Lyashevska, Olga; Malone, Fiona; Fiehler, Jens; Morris, Liam** (2025). *Estimating Individualized Effectiveness of Receiving Successful Recanalization for Ischemic Stroke Cases Using Machine Learning Techniques.* _Journal of Stroke and Cerebrovascular Diseases._ [PDF](pdf/farmani2025.pdf) | [BibTeX](bib/farmani2025.bib)
 - **Klimesova B., Lyashevska O., Ruane N., D’Arcy, J., Talbot A., Rodger H., O’Dwyer K.** (2025). *Effects of temporal, geographical and environmental factors on salmon lice (Lepeophtheirus
 salmonis) levels of Atlantic salmon (Salmo salar) in Ireland.* _Scientific Reports._ 15: 34614. [PDF](pdf/klimesova2025.pdf) | [BibTeX](bib/klimesova2025.bib)
@@ -22,34 +69,9 @@ salmonis) levels of Atlantic salmon (Salmo salar) in Ireland.* _Scientific Repor
 - **Kanhai, La Daana K.; Gårdfeldt, Katarina; Lyashevska, Olga; Hassellöv, Martin; Thompson, Richard C.; O'Connor, Ian** (2018). *Microplastics in sub-surface waters of the Arctic Central Basin.* _Marine Pollution Bulletin ._ 130: 8 - 18. [PDF](pdf/kanhai2018.pdf) | [BibTeX](bib/kanhai2018.bib)
 - **Acampora, Heidi; White, Philip; Lyashevska, Olga; O'Connor, Ian** (2017). *Presence of persistent organic pollutants in a breeding common tern (Sterna hirundo) population in Ireland.* _Environmental Science and Pollution Research._ 1--11. [PDF](pdf/acampora2017.pdf) | [BibTeX](bib/acampora2017.bib)
 - **Lyashevska, Olga; Brus, Dick J.; van der Meer, Jaap** (2016). *Mapping species abundance by a spatial zero-inflated Poisson model: a case study in the Wadden Sea, the Netherlands.* _Ecology and Evolution._ [PDF](pdf/lyashevska2016a.pdf) | [BibTeX](bib/lyashevska2016a.bib)
+- **Kanhai, La Daana K.; Officer, Rick; Lyashevska, Olga; Thompson, Richard C.; O'Connor, Ian** (2016). *Microplastic abundance, distribution and composition along a latitudinal gradient in the Atlantic Ocean.* _Marine Pollution Bulletin ._ -. [PDF](pdf/kanhai2017.pdf) | [BibTeX](bib/kanhai2017.bib)
 - **Lyashevska, Olga; Brus, Dick J.; Meer, Jaap van der** (2016). *Grid-spacing and the quality of abundance maps for species that show spatial autocorrelation and zero-inflation.* _Spatial Statistics ._ 18, Part B: 386 - 395. [PDF](pdf/lyashevska2016b.pdf) | [BibTeX](bib/lyashevska2016b.bib)
 - **Acampora, Heidi; Lyashevska, Olga; Franeker, Jan Andries Van; O'Connor, Ian** (2016). *The use of beached bird surveys for marine plastic litter monitoring in Ireland.* _Marine Environmental Research ._ 120: 122 - 129. [PDF](pdf/acampora2016.pdf) | [BibTeX](bib/acampora2016.bib)
-- **Kanhai, La Daana K.; Officer, Rick; Lyashevska, Olga; Thompson, Richard C.; O'Connor, Ian** (2016). *Microplastic abundance, distribution and composition along a latitudinal gradient in the Atlantic Ocean.* _Marine Pollution Bulletin ._ -. [PDF](pdf/kanhai2017.pdf) | [BibTeX](bib/kanhai2017.bib)
 - **Farnsworth, Keith D.; Lyashevska, Olga; Fung, Tak** (2012). *Functional complexity: The source of value in biodiversity.* _Ecological Complexity ._ 11(0): 46 - 52. [PDF](pdf/farnsworth2012.pdf) | [BibTeX](bib/farnsworth2012.bib)
 - **Lyashevska, Olga; Farnsworth, Keith D.** (2012). *How many dimensions of biodiversity do we need?.* _Ecological Indicators ._ 18(0): 485 - 492. [PDF](pdf/lyashevska2012.pdf) | [BibTeX](bib/lyashevska2012.bib)
-
 <!-- PUBLICATIONS END -->
-
-## How this repository works
-
-This repository is designed to keep publications (BibTeX entries and PDFs) together and to regenerate the publications list automatically in CI.
-
-Key points:
-
-- Place BibTeX files in the `bib/` directory and PDFs in the `pdf/` directory.
-- Use the same key/name for a publication's BibTeX and PDF files. For example, for a publication with key `lyashevska2016a` provide `bib/lyashevska2016a.bib` and (optionally) `pdf/lyashevska2016a.pdf`.
-- The generator script `bib_to_md.py` reads the files in `bib/`, normalizes author names, adds available metadata (volume/number/pages), and writes a generated `publications.md` (used as an intermediate artifact).
-
-What CI does:
-
-- The GitHub Actions workflow (`.github/workflows/update-readme.yml`) checks out the repository and installs Python dependencies (from `requirements.txt` when present).
-- It runs `bib_to_md.py` to regenerate `publications.md` and then injects the generated Markdown into `README.md` between the markers `<!-- PUBLICATIONS START -->` and `<!-- PUBLICATIONS END -->`.
-- Before committing the updated README, CI runs `scripts/verify_readme_bibs.py` which ensures that every BibTeX key found under `bib/` is referenced in the publications block; the workflow fails if keys are missing.
-- The workflow commits only the updated `README.md` (the generated `publications.md` is an intermediate artifact and does not need to be tracked).
-
-
-Tips for working locally:
-
-- See `DEVNOTES.md` for developer setup and local commands (virtual environment, installing dependencies, running the generator and verification).
-
-- Keep file keys consistent: matching names between `bib/{key}.bib` and `pdf/{key}.pdf` makes the links and verification deterministic.

@@ -1,4 +1,5 @@
 ## 📚 Publications
+- **Klimesova, Bela; O'Dwyer, Katie; D'Arcy, Jack; Talbot, Anita; Lyashevska, Olga; Rodger, Hamish; McManus, Catherine; Ruane, Neil M.** (2026). *Assessing Sea lice infection levels in Irish Atlantic salmon farms: Metrics and treatment trigger levels.* _Aquaculture._ 614: 743568. [PDF](pdf/klimesova2026.pdf) | [BibTeX](bib/klimesova2026.bib)
 - **Farmani, Vahid; Kniep, Helge; Maros, Mate E.; Lyashevska, Olga; Malone, Fiona; Fiehler, Jens; Morris, Liam** (2025). *Estimating Individualized Effectiveness of Receiving Successful Recanalization for Ischemic Stroke Cases Using Machine Learning Techniques.* _Journal of Stroke and Cerebrovascular Diseases._ [PDF](pdf/farmani2025.pdf) | [BibTeX](bib/farmani2025.bib)
 - **Klimesova B., Lyashevska O., Ruane N., D’Arcy, J., Talbot A., Rodger H., O’Dwyer K.** (2025). *Effects of temporal, geographical and environmental factors on salmon lice (Lepeophtheirus
 salmonis) levels of Atlantic salmon (Salmo salar) in Ireland.* _Scientific Reports._ 15: 34614. [PDF](pdf/klimesova2025.pdf) | [BibTeX](bib/klimesova2025.bib)

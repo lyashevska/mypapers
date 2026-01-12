@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: verify-publications
+        name: Verify all bib keys in README
+        entry: python scripts/verify_readme_bibs.py
+        language: system
+        pass_filenames: false
+        files: '\.(bib|bibtex)$|README\.md$'
