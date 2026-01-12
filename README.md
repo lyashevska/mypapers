@@ -26,7 +26,7 @@ salmonis) levels of Atlantic salmon (Salmo salar) in Ireland.* _Scientific Repor
 - **Acampora, Heidi; Lyashevska, Olga; Franeker, Jan Andries Van; O'Connor, Ian** (2016). *The use of beached bird surveys for marine plastic litter monitoring in Ireland.* _Marine Environmental Research ._ 120: 122 - 129. [PDF](pdf/acampora2016.pdf) | [BibTeX](bib/acampora2016.bib)
 - **Kanhai, La Daana K.; Officer, Rick; Lyashevska, Olga; Thompson, Richard C.; O'Connor, Ian** (2016). *Microplastic abundance, distribution and composition along a latitudinal gradient in the Atlantic Ocean.* _Marine Pollution Bulletin ._ -. [PDF](pdf/kanhai2017.pdf) | [BibTeX](bib/kanhai2017.bib)
 - **Farnsworth, Keith D.; Lyashevska, Olga; Fung, Tak** (2012). *Functional complexity: The source of value in biodiversity.* _Ecological Complexity ._ 11(0): 46 - 52. [PDF](pdf/farnsworth2012.pdf) | [BibTeX](bib/farnsworth2012.bib)
-- **Lyashevska, Olga; Farnsworth, Keith D.** (2012). *How many dimensions of biodiversity do we need?.* _Ecological Indicators ._ 18(0): 485 - 492. [PDF](pdf/lyashevska2012.pdf) | [BibTeX](bib/lyashevska2012.bib)<!-- PUBLICATIONS END -->
+- **Lyashevska, Olga; Farnsworth, Keith D.** (2012). *How many dimensions of biodiversity do we need?.* _Ecological Indicators ._ 18(0): 485 - 492. [PDF](pdf/lyashevska2012.pdf) | [BibTeX](bib/lyashevska2012.bib)
 
 <!-- PUBLICATIONS END -->
 
