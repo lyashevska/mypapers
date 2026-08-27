@@ -1,10 +1,8 @@
 ## About
 
-I am a Research Software Engineer and Data Scientist working at the intersection of machine learning, statistical modelling, and natural language processing.
+I am a Research Software Engineer working at the intersection of machine learning, statistical modelling, and natural language processing.
 
 My work spans marine and ecological research, medicine, and the social sciences. I build reproducible data pipelines, predictive models, and research software that combine domain expertise with robust, interpretable methods.
-
-My publications range from methodological research—such as approaches to class imbalance and spatial zero-inflation—to applied studies of long-term species trends, gelatinous zooplankton, microplastics, and medical data.
 
 I value practical, well-documented code and reproducible workflows that make complex analyses transparent, reliable, and reusable across projects.
 
