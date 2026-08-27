@@ -1,9 +1,12 @@
 ## About
 
-I am a research software engineer and data scientist working across machine learning, statistical modelling and natural language processing applications. My work spans several domains — primarily marine and ecological systems, but also medical and linguistic/behavioral applications — where I build reproducible data pipelines, apply predictive models, and develop analysis tools that combine domain knowledge with interpretable ML.
+I am a Research Software Engineer and Data Scientist working at the intersection of machine learning, statistical modelling, and natural language processing.
 
-My publications reflect this mix: methodological contributions in statistical and machine-learning methods (for example, handling class imbalance and spatial zero-inflation), applied ecological and marine science studies (long-term species trends, gelatinous zooplankton, microplastics), and translational work in medical data analysis. I prefer practical, well-documented code and reproducible workflows that make analyses reusable across projects.
+My work spans marine and ecological research, medicine, and the social sciences. I build reproducible data pipelines, predictive models, and research software that combine domain expertise with robust, interpretable methods.
 
+My publications range from methodological research—such as approaches to class imbalance and spatial zero-inflation—to applied studies of long-term species trends, gelatinous zooplankton, microplastics, and medical data.
+
+I value practical, well-documented code and reproducible workflows that make complex analyses transparent, reliable, and reusable across projects.
 
 ## How this repository works
 
